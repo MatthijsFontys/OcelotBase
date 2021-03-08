@@ -1,0 +1,29 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "image-api",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{url}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "matthijsfontys.github.io/tacodel-deploy",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/taco",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get" ]
+    }
+  ]
+}

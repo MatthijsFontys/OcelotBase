@@ -1,0 +1,16 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/v2/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "pokeapi.co",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/pokemon-api/{url}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get" ]
+    }
+  ]
+}
